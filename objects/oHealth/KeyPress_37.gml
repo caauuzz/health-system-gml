@@ -1,0 +1,1 @@
+hp = healthManager.RemoveHealth(damage);
