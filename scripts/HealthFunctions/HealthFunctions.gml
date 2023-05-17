@@ -97,7 +97,7 @@ function HealthController(_hpMax) constructor
 		draw_sprite_ext(_borderType, 0, _x, _y, _width, _height, 0, _borderColor, 1);
 	}
 	
-	/// @function DrawHealthbarSpriteExt(spriteHealth, x, y, width, height, [borderTypes], [backgroundColor], [borderColor], [primaryColor], [secondaryColor], [barAlpha], [useDrainEffect], [drainSpeed], [useText], [textString], [textScale]);
+	/// @function DrawHealthbarSpriteExt(spriteHealth, x, y, width, height, [borderTypes], [backgroundColor], [borderColor], [primaryColor], [secondaryColor], [barAlpha], [useDrainEffect], [drainSpeed], [canMergeColors], [textString], [textScale]);
 	static DrawHealthbarSpriteExt = function(
 		_spriteHealth, 
 		_x, 
@@ -112,8 +112,8 @@ function HealthController(_hpMax) constructor
 		_barAlpha = 1, 
 		_useDrainEffect = true, 
 		_drainSpeed = 0.1,
-		_useText = false,
-		_textString = "Simple Text",
+		_canMergeColors = false,
+		_textString = "",
 		_textScale = 2)
 	{
 		var _customWidth = _width * 0.1;
@@ -121,6 +121,11 @@ function HealthController(_hpMax) constructor
 		
 		// Pegar a largura da minha barra de vida com base na minha vida atual
 		var _healthWidth = (hpTemp / hpMax) * _customWidth;
+		
+		// Mesclando as cores da barra de vida
+		var _color;
+		if (_canMergeColors) _color = merge_color(_secondaryColor, _primaryColor, (hpTemp/hpMax));
+		else _color = _primaryColor;
 		
 		var _backgroundHealthWidth;
 		if (_useDrainEffect) _backgroundHealthWidth = (hpBackground / hpMax) * _customWidth
@@ -141,7 +146,7 @@ function HealthController(_hpMax) constructor
 		}
 		
 		// Desenhando a barra de vida
-		draw_sprite_ext(_spriteHealth, 0, _x, _y, _healthWidth, _customHeight, 0, _primaryColor, _barAlpha);
+		draw_sprite_ext(_spriteHealth, 0, _x, _y, _healthWidth, _customHeight, 0, _color, _barAlpha);
 		
 		// Desenhando a borda
 		draw_sprite_ext(_borderType, 0, _x, _y, _customWidth, _customHeight, 0, _borderColor, _barAlpha);
