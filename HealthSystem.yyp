@@ -4,8 +4,13 @@
   "name": "HealthSystem",
   "resources": [
     {"id":{"name":"oHealth","path":"objects/oHealth/oHealth.yy",},"order":0,},
-    {"id":{"name":"scrHealth","path":"scripts/scrHealth/scrHealth.yy",},"order":0,},
+    {"id":{"name":"HealthFunctions","path":"scripts/HealthFunctions/HealthFunctions.yy",},"order":0,},
+    {"id":{"name":"sHealthborder1","path":"sprites/sHealthborder1/sHealthborder1.yy",},"order":2,},
+    {"id":{"name":"sHealthborder0","path":"sprites/sHealthborder0/sHealthborder0.yy",},"order":1,},
     {"id":{"name":"fDefault","path":"fonts/fDefault/fDefault.yy",},"order":0,},
+    {"id":{"name":"sHealthborder2","path":"sprites/sHealthborder2/sHealthborder2.yy",},"order":3,},
+    {"id":{"name":"sHealthbar","path":"sprites/sHealthbar/sHealthbar.yy",},"order":0,},
+    {"id":{"name":"HealthMacros","path":"scripts/HealthMacros/HealthMacros.yy",},"order":1,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [

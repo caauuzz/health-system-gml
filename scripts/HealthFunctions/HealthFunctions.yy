@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scrHealth",
+  "name": "HealthFunctions",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

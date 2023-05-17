@@ -24,4 +24,6 @@ draw_set_halign(-1);
 draw_set_valign(-1);
 draw_set_font(-1);
 
-healthManager.DrawHealthbarExt(_dsW/2-_width/2, _dsH/2, _width, _height, #04130e, #25be8b, #0b392a, 2, false, true, 0.2);
+healthManager.DrawHealthbarSpriteExt(sHealthbar, 20, 40, 100, 40, HP_BORDER_TYPE_BOLD, #04130e, #ccffe6, #25be8b, #0b392a,,,,true,"Health",2);
+shieldManager.DrawHealthbarSpriteExt(sHealthbar, 20, 120, 100, 40, HP_BORDER_TYPE_BOLD, #442814,#ffd8b3,#e28743,#885128,,,,true,"Armour",2);
+demoManager.DrawHealthbarExt(_dsW/2-200, _dsH/2, 400, 40, #ccffe6, #04130e, #25be8b, #0b392a, 3);
