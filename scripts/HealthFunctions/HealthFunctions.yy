@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Scripts",
-    "path": "folders/HPB System/Scripts.yy",
+    "path": "folders/HBS System/Scripts.yy",
   },
 }

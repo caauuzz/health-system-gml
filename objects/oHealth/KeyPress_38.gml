@@ -1,3 +1,5 @@
+/// @desc DEBUG
+
 receive += 1;
 damage += 1;
 	

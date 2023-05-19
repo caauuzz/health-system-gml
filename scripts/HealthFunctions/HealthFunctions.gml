@@ -1,3 +1,4 @@
+// Essa é a função que faz a mágica acontencer!
 function HealthController(_hpMax) constructor
 {
 	// Valor da vida maxima
@@ -97,7 +98,7 @@ function HealthController(_hpMax) constructor
 		draw_sprite_ext(_borderType, 0, _x, _y, _width, _height, 0, _borderColor, 1);
 	}
 	
-	/// @function DrawHealthbarSpriteExt(spriteHealth, x, y, width, height, [borderTypes], [backgroundColor], [borderColor], [primaryColor], [secondaryColor], [barAlpha], [useDrainEffect], [drainSpeed], [canMergeColors], [textString], [textScale]);
+	/// @function DrawHealthbarRoundedExt(spriteHealth, x, y, width, height, [borderTypes], [backgroundColor], [borderColor], [primaryColor], [secondaryColor], [useDrainEffect], [drainSpeed], [canMergeColors], [textFont], [textString], [textScale]);
 	static DrawHealthbarRoundedExt = function(
 		_spriteHealth, 
 		_x, 
@@ -109,10 +110,10 @@ function HealthController(_hpMax) constructor
 		_borderColor = c_white, 
 		_primaryColor = c_green, 
 		_secondaryColor = c_red, 
-		_barAlpha = 1, 
 		_useDrainEffect = true, 
 		_drainSpeed = 0.1,
 		_canMergeColors = false,
+		_textFont = -1,
 		_textString = "",
 		_textScale = 2)
 	{
@@ -136,22 +137,22 @@ function HealthController(_hpMax) constructor
 		hpBackground = lerp(hpBackground, hpTemp, _drainSpeed * 0.75);
 		
 		// Desenhando o background
-		draw_sprite_ext(_spriteHealth, 0, _x, _y, _customWidth, _customHeight, 0, _backgroundColor, _barAlpha);
+		draw_sprite_ext(_spriteHealth, 0, _x, _y, _customWidth, _customHeight, 0, _backgroundColor, 1);
 		
 		// Desenhando a barra de vida de background (Drain Effect)
 		if (_useDrainEffect)
 		{
 			// Desenhando o efeito de "Drain", drenagem da vida
-			draw_sprite_ext(_spriteHealth, 0, _x, _y, _backgroundHealthWidth, _customHeight, 0, _secondaryColor, _barAlpha);
+			draw_sprite_ext(_spriteHealth, 0, _x, _y, _backgroundHealthWidth, _customHeight, 0, _secondaryColor, 1);
 		}
 		
 		// Desenhando a barra de vida
-		draw_sprite_ext(_spriteHealth, 0, _x, _y, _healthWidth, _customHeight, 0, _color, _barAlpha);
+		draw_sprite_ext(_spriteHealth, 0, _x, _y, _healthWidth, _customHeight, 0, _color, 1);
 		
 		// Desenhando a borda
-		draw_sprite_ext(_borderType, 0, _x, _y, _customWidth, _customHeight, 0, _borderColor, _barAlpha);
+		draw_sprite_ext(_borderType, 0, _x, _y, _customWidth, _customHeight, 0, _borderColor, 1);
 		
-		draw_set_font(fDefault);
+		draw_set_font(_textFont);
 		draw_text_transformed(_x+2, _y-14*_textScale, _textString, _textScale, _textScale, 0);
 		draw_set_font(-1);
 	}

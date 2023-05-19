@@ -6,6 +6,7 @@
     {"id":{"name":"oHealth","path":"objects/oHealth/oHealth.yy",},"order":0,},
     {"id":{"name":"HealthFunctions","path":"scripts/HealthFunctions/HealthFunctions.yy",},"order":0,},
     {"id":{"name":"sHealthborder1","path":"sprites/sHealthborder1/sHealthborder1.yy",},"order":2,},
+    {"id":{"name":"README","path":"notes/README/README.yy",},"order":0,},
     {"id":{"name":"sHealthborder0","path":"sprites/sHealthborder0/sHealthborder0.yy",},"order":1,},
     {"id":{"name":"fDefault","path":"fonts/fDefault/fDefault.yy",},"order":0,},
     {"id":{"name":"sHealthborder2","path":"sprites/sHealthborder2/sHealthborder2.yy",},"order":3,},
@@ -35,11 +36,11 @@
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fonts","folderPath":"folders/Fonts.yy","order":7,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"HBS System","folderPath":"folders/HBS System.yy","order":15,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/HBS System/Objects.yy","order":2,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/HBS System/Scripts.yy","order":3,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/HBS System/Sprites.yy","order":1,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Rooms","folderPath":"folders/Rooms.yy","order":10,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"HPB System","folderPath":"folders/HPB System.yy","order":15,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/HPB System/Objects.yy","order":1,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/HPB System/Sprites.yy","order":0,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/HPB System/Scripts.yy","order":2,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},

@@ -38,6 +38,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",
-    "path": "folders/HPB System/Objects.yy",
+    "path": "folders/HBS System/Objects.yy",
   },
 }
