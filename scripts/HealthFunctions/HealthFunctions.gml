@@ -81,8 +81,8 @@ function HealthController(_hpMax) constructor
 		draw_rectangle_color(_x, _y, _x + _healthWidth, _y + _height, _color, _color, _color, _color, false);
 	}
 	
-	/// @function DrawHealthbarSprite(borderTypes, spriteHealth, x, y, width, height, [borderColor], [healthColor]);
-	static DrawHealthbarSprite = function(_borderType, _spriteHealth, _x, _y, _width, _height, _borderColor = c_white, _healthColor = c_green)
+	/// @function DrawHealthbarRounded(borderTypes, spriteHealth, x, y, width, height, [borderColor], [healthColor]);
+	static DrawHealthbarRounded = function(_borderType, _spriteHealth, _x, _y, _width, _height, _borderColor = c_white, _healthColor = c_green)
 	{
 		// Pegar a largura da minha barra de vida com base na minha vida atual
 		var _healthWidth = (hpTemp / hpMax) * _width;
@@ -98,7 +98,7 @@ function HealthController(_hpMax) constructor
 	}
 	
 	/// @function DrawHealthbarSpriteExt(spriteHealth, x, y, width, height, [borderTypes], [backgroundColor], [borderColor], [primaryColor], [secondaryColor], [barAlpha], [useDrainEffect], [drainSpeed], [canMergeColors], [textString], [textScale]);
-	static DrawHealthbarSpriteExt = function(
+	static DrawHealthbarRoundedExt = function(
 		_spriteHealth, 
 		_x, 
 		_y, 
