@@ -93,6 +93,6 @@
   },
   "parent": {
     "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "path": "folders/HPB System/Sprites.yy",
   },
 }
